@@ -9,7 +9,17 @@
 		  ttq.load('CO1DJERC77U6AAG8U3Q0');
 		  ttq.page();
 		}(window, document, 'ttq');
-	    ttq.instance('CO1DJERC77U6AAG8U3Q0').track('CompletePayment')
+	    ttq.instance('CO1DJERC77U6AAG8U3Q0').track('CompletePayment',{  
+    contents: [
+    {
+      content_id: '301',
+      content_name: 'dress',
+      quantity: 1,
+      price: 8,
+    }],
+    content_type: 'product',
+    value: 9.2,
+    currency: 'USD',  })
 
 	</script>
 <h1>Hello World</h1>
