@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html>
 <body>
+
+<h1>Hello World</h1>
+	<button id="addToCartButton"> click</button>
+<p>I'm hosted with GitHub Pages.</p>
 <script>
 		!function (w, d, t) {
 		  w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++
@@ -31,11 +35,8 @@
     content_type: 'product',
     value: 9.2,
     currency: 'USD',  })
-	</script>
-<h1>Hello World</h1>
-	<button id="addToCartButton"> click</button>
-<p>I'm hosted with GitHub Pages.</p>
 
+	
 	document.getElementById("addToCartButton").onclick = function(){
     ttq.track('AddToCart',{  
     contents: [
@@ -49,6 +50,6 @@
     value: 9.2,
     currency: 'USD',  })
 }
-</script>
+	</script>
 </body>
 </html>
