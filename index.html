@@ -20,9 +20,35 @@
     content_type: 'product',
     value: 9.2,
     currency: 'USD',  })
-
+ ttq.instance('CO1DJERC77U6AAG8U3Q0').track('CompletePayment',{  
+    contents: [
+    {
+      content_id: '301',
+      content_name: 'dress',
+      quantity: 1,
+      price: 8,
+    }],
+    content_type: 'product',
+    value: 9.2,
+    currency: 'USD',  })
 	</script>
 <h1>Hello World</h1>
+	<button id="addToCartButton"> click</button>
 <p>I'm hosted with GitHub Pages.</p>
+
+	document.getElementById("addToCartButton").onclick = function(){
+    ttq.track('AddToCart',{  
+    contents: [
+    {
+      content_id: '301',
+      content_name: 'dress',
+      quantity: 1,
+      price: 8,
+    }],
+    content_type: 'product',
+    value: 9.2,
+    currency: 'USD',  })
+}
+</script>
 </body>
 </html>
