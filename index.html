@@ -34,11 +34,7 @@
         ttq.load('CO1DJERC77U6AAG8U3Q0');
         ttq.page();
     }(window, document, 'ttq');
-// add this before event code to all pages where PII data postback is expected and appropriate 
-    ttq.identify({
-    	"email": "yuhongcheng@yahoo.ca"
-    
-    });
+
 
 ttq.track('Contact', {
 	"contents": [
@@ -121,19 +117,23 @@ ttq.track('Contact', {
         })
     }
     document.getElementById("installation").onclick = function () {
-        ttq.track('installation', {
-            
-            contents: [
-                {
-                    content_id: '301',
-                    content_name: 'dress',
-                    quantity: 1,
-                    price: 8,
-                }],
-            content_type: 'product',
-            value: 9.2,
-            currency: 'USD',
-        })
+       // add this before event code to all pages where PII data postback is expected and appropriate 
+	ttq.identify({
+		"email": "123@gmail.com"
+		
+	});
+	
+	ttq.track('Contact', {
+		"contents": [
+			{
+				"content_id": "<content_identifier>", // string. ID of the product. Example: "1077218".
+				"content_type": "<content_type>", // string. Either product or product_group.
+				"content_name": "<content_name>" // string. The name of the page or product. Example: "shirt".
+			}
+		],
+		"value": "<content_value>", // number. Value of the order or items sold. Example: 100.
+		"currency": "<content_currency>" // string. The 4217 currency code. Example: "USD".
+	});
     }
 </script>
 </body>
