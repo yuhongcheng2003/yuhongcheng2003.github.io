@@ -34,14 +34,29 @@
         ttq.load('CO1DJERC77U6AAG8U3Q0');
         ttq.page();
     }(window, document, 'ttq');
+// add this before event code to all pages where PII data postback is expected and appropriate 
+    ttq.identify({
+    	"email": "yuhongcheng@yahoo.ca"
+    
+    });
 
+ttq.track('Contact', {
+	"contents": [
+		{
+			"content_id": "<content_identifier>", // string. ID of the product. Example: "1077218".
+			"content_type": "<content_type>", // string. Either product or product_group.
+			"content_name": "<content_name>" // string. The name of the page or product. Example: "shirt".
+		}
+	],
+	"value": "<content_value>", // number. Value of the order or items sold. Example: 100.
+	"currency": "<content_currency>" // string. The 4217 currency code. Example: "USD".
+});
     ttq.instance('CO1DJERC77U6AAG8U3Q0').track('contact');
     ttq.instance('CO1DJERC77U6AAG8U3Q0').track('CompletePayment', {
         contents: [
             {
                 content_id: '301',
                 content_name: 'dress',
-                email:'yuhongcheng2003@yahoo.ca',
                 quantity: 1,
                 price: 8,
             }],
@@ -54,7 +69,6 @@
             {
                 content_id: '301',
                 content_name: 'dress',
-                email:'yuhongcheng2003@yahoo.ca',
                 quantity: 1,
                 price: 8,
             }],
@@ -70,7 +84,6 @@
                 {
                     content_id: '301',
                     content_name: 'dress',
-                    email:'yuhongcheng2003@yahoo.ca',
                     quantity: 1,
                     price: 8,
                 }],
@@ -109,6 +122,7 @@
     }
     document.getElementById("installation").onclick = function () {
         ttq.track('installation', {
+            
             contents: [
                 {
                     content_id: '301',
